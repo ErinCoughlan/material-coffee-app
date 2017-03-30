@@ -1,0 +1,9 @@
+<md-toolbar class="header"
+            color="accent">
+  Coffee!
+</md-toolbar>
+
+<div class="menu-container">
+  <app-coffee-card *ngFor="let item of coffeeItems"
+                   [menuItem]="item"></app-coffee-card>
+</div>

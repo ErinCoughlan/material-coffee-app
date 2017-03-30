@@ -1,0 +1,28 @@
+<md-card class="coffee-card">
+  <md-card-header class="coffee-card-header">
+    <md-card-title>{{menuItem.name}}</md-card-title>
+    <button md-icon-button
+            (click)="favorite()">
+
+      <md-icon class="md-card-md-image"
+               [ngClass]="{'coffee-favorite-fill': menuItem.favorite}">
+        {{ getFavoriteIcon() }}
+    </md-icon>
+    </button>
+  </md-card-header>
+
+  <img md-card-image
+       class="coffee-image"
+       [src]="menuItem.image"
+       [alt]="menuItem.name">
+
+  <md-card-content>
+    <p>
+      {{menuItem.description}}
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button
+            (click)="orderCoffee()">ORDER</button>
+  </md-card-actions>
+</md-card>

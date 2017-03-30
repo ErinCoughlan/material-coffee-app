@@ -1,0 +1,27 @@
+<div md-dialog-content
+     class="dialog-content">
+  <div class="dialog-image">
+    <img [src]="menuItem.image"
+         [alt]="menuItem.name">
+    <div class="dialog-image-text">{{menuItem.name}}</div>
+  </div>
+
+  <md-input-container class="option-input"
+                      name="customer"
+                      [(ngModel)]="customerName"
+                      ngDefaultControl>
+    <input mdInput
+           placeholder="Name">
+  </md-input-container>
+
+  <md-checkbox name="asap"
+               [(ngModel)]="asap"
+               ngDefaultControl>
+    NOW!!!
+  </md-checkbox>
+</div>
+
+<div md-dialog-actions>
+  <button md-button
+          (click)="closeDialog()">Order</button>
+</div>

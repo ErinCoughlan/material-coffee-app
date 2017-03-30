@@ -1,0 +1,42 @@
+.coffee-card {
+  background-color: #f8f8f8;
+  margin: 16px;
+  width: 192px;
+}
+
+.coffee-card-header {
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.coffee-image {
+  height: auto;
+}
+
+.coffee-favorite-fill {
+  color: #c62828;
+}
+
+.dialog-image {
+  position: relative;
+}
+
+.dialog-image img {
+  margin: 0 -24px 16px;
+  width: 320px;
+}
+
+.dialog-image-text {
+  color: white;
+  left: 0;
+  position: absolute;
+  top: 220px;
+}
+
+.option-input {
+  width: 100%;
+}
+
+.dialog-content {
+  padding-bottom: 24px;
+}
