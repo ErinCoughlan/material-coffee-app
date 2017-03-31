@@ -1,23 +1,39 @@
+import {Component} from '@angular/core';
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {CoffeeCardComponent} from './coffee-card.component';
+import {MenuItem} from './../coffee';
+import {CoffeeCardComponent, CoffeeCardModule} from './coffee-card.component';
 
 describe('CoffeeCardComponent', () => {
-  let component: CoffeeCardComponent;
-  let fixture: ComponentFixture<CoffeeCardComponent>;
-
   beforeEach(async(() => {
-    TestBed.configureTestingModule({declarations: [CoffeeCardComponent]})
+    TestBed
+        .configureTestingModule({
+          imports: [CoffeeCardModule],
+          declarations: [CoffeeCardTestComponent],
+        })
         .compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(CoffeeCardComponent);
-    component = fixture.componentInstance;
+  it('should render', () => {
+    const fixture = TestBed.createComponent(CoffeeCardTestComponent);
+    const component = fixture.componentInstance;
     fixture.detectChanges();
-  });
 
-  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
+/** Test components that renders a CoffeeCard. */
+@Component({
+  template: `<app-coffee-card
+                 *ngFor="let item of coffeeItems"
+                 [menuItem]="item"></app-coffee-card>`
+})
+class CoffeeCardTestComponent {
+  item: MenuItem = {
+    name: 'Erin\'s Favorite Latte',
+    description: 'The most delicious latte in the world.',
+    image: 'delicious_coffee.png',
+  };
+}
