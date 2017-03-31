@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
+## Prerequisites
+
+* [NodeJs](https://nodejs.org/en/download/)
+* Angular CLI
+  - Run `npm install -g @angular/cli`
+* Typescript 2.2
+  - Run `npm install -g typescript@2.2.0`
+* `npm install`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
