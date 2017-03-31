@@ -24,6 +24,7 @@ before_script:
   - npm install -g @angular/cli
   - npm install -g karma
   - npm install
+  - npm rebuild node-sass --force
   - ng build
 
 script: karma start config/karma.conf.js --single-run
